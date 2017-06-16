@@ -38,6 +38,7 @@ def webhook():
 
                     if message_text in ["hi", "hello", "hola"]:
                         send_message(sender_id, "Hello form GDG Meetup!")
+                        send_image(sender_id, "http://images.memes.com/meme//935393")
                     else:
                         send_message(sender_id, "Still learning!")
                     
@@ -63,7 +64,7 @@ def send_message(recipient_id, message_text):
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
 
 # Method to send images
-def send_image(recipient_id, message_text):
+def send_image(recipient_id, img_url):
     params = {
         "access_token": PAGE_ACCESS_TOKEN
     }
@@ -75,7 +76,12 @@ def send_image(recipient_id, message_text):
             "id": recipient_id
         },
         "message": {
-            "text": message_text
+            "attachment": {
+                "type":"image",
+                "payload": {
+                    "url": img_url
+                }
+            }
         }
     })
     r = requests.post("https://graph.facebook.com/v2.6/me/messages", params=params, headers=headers, data=data)
