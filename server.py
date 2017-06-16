@@ -1,4 +1,4 @@
-# Import python modules
+# Import python modules.
 import os
 import sys
 import json
