@@ -35,12 +35,18 @@ def webhook():
                     sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"]["text"]  # the message's text
+                  
+                    link = requests.get("http://memes-kashyapb.rhcloud.com/"+str(message_text)).text
+                    image_link = json.loads(link)
+                    image_link = image_link['data'][0]['link']
 
                     if message_text in ["hi", "hello", "hola"]:
                         send_message(sender_id, "Hello form GDG Meetup!")
-                        send_image(sender_id, "http://images.memes.com/meme//935393")
                     else:
-                        send_message(sender_id, "Still learning!")
+                        if len(image_link) > 0:
+                            send_image(sender_id, image_link)
+                        else:
+                            send_message(sender_id, "Still Learning.")
                     
 
     return "ok", 200
