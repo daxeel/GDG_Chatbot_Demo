@@ -8,6 +8,8 @@ We are very thankful to the GDG Ahmedabad team with <br>
 <a href="https://www.facebook.com/dhuma1981?ref=br_rs">Dhumil Shah</a><br>
 We are also highly thankful to venue sponsor <a href="https://www.facebook.com/profile.php?id=211159938915113">Ecosmob Technologies</a>
 
+Presentation : https://speakerdeck.com/daxeel/chatbots-for-beginners
+
 # Speakers
 Daxeel Soni <br>
 Kashyap Raval
