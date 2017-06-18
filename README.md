@@ -12,4 +12,5 @@ Presentation : https://speakerdeck.com/daxeel/chatbots-for-beginners
 
 # Speakers
 Daxeel Soni <br>
-Kashyap Raval
+Kashyap Raval<br>
+Rajat Talesra
