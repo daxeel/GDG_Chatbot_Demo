@@ -1,3 +1,8 @@
+# Author : Daxeel Soni
+# Email  : daxeelsoni44@gmail.com
+# Web    : http://daxeel.github.io
+# About  : Dictionary based Facebook chatbot python server file
+
 # Import python modules
 import os
 import sys
